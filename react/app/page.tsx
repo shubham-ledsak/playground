@@ -1,11 +1,12 @@
 'use client';
-import { todo } from 'node:test';
-import { useEffect, useState } from 'react';
 
-export default function TodoApp() {
+import TodoApp from './components/TodoList';
+import { TodoProvider } from './context/TodoContext';
+
+export default function Page() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h3>Weather App</h3>
-    </div>
+    <TodoProvider>
+      <TodoApp />
+    </TodoProvider>
   );
 }
